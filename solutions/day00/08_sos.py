@@ -17,7 +17,7 @@ morsecode = ''
 
 for c in text:
     if c in MORSE:
-        morsecode = morsecode + MORSE[c] + ' '
+        morsecode += MORSE[c] + ' '
     else:
         print('ERROR')
         exit()

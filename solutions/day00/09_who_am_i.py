@@ -11,7 +11,7 @@ print("Good luck!\n")
 while guess != nbr:
     guess = input("What's your guess between 1 and 99?\n>> ")
     if guess.isnumeric():
-        attempt = attempt + 1
+        attempt += 1
         guess = int(guess)
 
         if guess < nbr:

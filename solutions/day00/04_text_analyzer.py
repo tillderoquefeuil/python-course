@@ -6,7 +6,7 @@ def text_analyzer(txt):
     upper = sum(1 for c in txt if c.isupper())
     lower = sum(1 for c in txt if c.islower())
     punct = sum(txt.count(c) for c in string.punctuation)
-    space = txt.count(' ')
+    space = sum(1 for c in txt if c.isspace())
 
     print("The text contains " + str(total) + " characters:\n")
     print("- " + str(upper) + " upper letters\n")
