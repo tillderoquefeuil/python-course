@@ -3,10 +3,17 @@ import string
 
 def text_analyzer(txt):
     total = len(txt)
-    upper = sum(1 for c in txt if c.isupper())
-    lower = sum(1 for c in txt if c.islower())
-    punct = sum(txt.count(c) for c in string.punctuation)
-    space = sum(1 for c in txt if c.isspace())
+    upper, lower, punct, space = 0, 0, 0, 0
+
+    for i in txt: 
+        if i.isupper(): 
+            upper += 1
+        elif i.islower(): 
+            lower += 1
+        elif i in string.punctuation: 
+            punct += 1
+        elif i.isspace():
+            space += 1
 
     print("The text contains " + str(total) + " characters:\n")
     print("- " + str(upper) + " upper letters\n")
