@@ -1,4 +1,5 @@
 # python-course
 A python course based on 42's python bootcamp
 
-You can find Day00 subject [here](https://github.com/tillderoquefeuil/python-course/subjects/day00.pdf)
+## Subject 
+- [day00](https://github.com/tillderoquefeuil/python-course/blob/main/subjects/day00.pdf)
