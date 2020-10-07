@@ -1,16 +1,10 @@
 import sys
 
-error = False
-if len(sys.argv) < 3:
-    error = True
-elif len(sys.argv) > 3:
-    error = True
-    print("Input Error: too many arguments")
-elif not sys.argv[1].isnumeric() or not sys.argv[2].isnumeric():
-    error = True
-    print("Input Error: only numbers")
-
-if error:
+if len(sys.argv) != 3 or not sys.argv[1].isnumeric() or not sys.argv[2].isnumeric():
+    if len(sys.argv) > 3:
+        print("Input Error: too many arguments")
+    elif len(sys.argv) == 3 and (not sys.argv[1].isnumeric() or not sys.argv[2].isnumeric()):
+        print("Input Error: only numbers")
     print("Usage: python 05_operations.py <number1> <number2>\nExample:\n\tpython 05_operations.py 10 3")
     exit()
 
